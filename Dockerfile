@@ -13,6 +13,8 @@ RUN wget -P /usr/share/keyrings https://github.com/smlsharp/repos/raw/main/debia
 RUN wget -P /etc/apt/sources.list.d https://github.com/smlsharp/repos/raw/main/debian/dists/buster/smlsharp.list
 
 RUN apt-get update -qq && \
-    apt-get install -y --no-install-recommends smlsharp && \
-    apt-get -y clean && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install -y --no-install-recommends \
+      smlsharp \
+      libgmp10 \
+    && apt-get -y clean \
+    && rm -rf /var/lib/apt/lists/*
