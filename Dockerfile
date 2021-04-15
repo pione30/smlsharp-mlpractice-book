@@ -6,6 +6,8 @@ RUN apt-get update -qq && \
     apt-get install -y --no-install-recommends \
       build-essential \
       ca-certificates \
+      lsb-release \
+      software-properties-common \
       wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
