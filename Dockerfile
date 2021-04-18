@@ -7,8 +7,6 @@ RUN apt-get update -qq && \
       build-essential \
       ca-certificates \
       gnupg \
-      lsb-release \
-      software-properties-common \
       wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
